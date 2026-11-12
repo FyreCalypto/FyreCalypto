@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="44" viewBox="0 0 420 44" role="img" aria-labelledby="title">
+  <title id="title">JavaScript, HTML, and CSS</title>
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="650">
+    <rect x="1" y="1" width="151" height="42" rx="9" fill="#221d16" stroke="#715b32"/>
+    <rect x="11" y="9" width="27" height="26" rx="5" fill="#ffda7d"/>
+    <text x="24.5" y="27" text-anchor="middle" fill="#23190e" font-size="12" font-weight="800">JS</text>
+    <text x="47" y="27" fill="#fff0c7">JavaScript</text>
+
+    <rect x="161" y="1" width="124" height="42" rx="9" fill="#281b19" stroke="#874c39"/>
+    <rect x="171" y="9" width="27" height="26" rx="5" fill="#ff996d"/>
+    <text x="184.5" y="27" text-anchor="middle" fill="#23130f" font-size="13" font-weight="800">&lt;/&gt;</text>
+    <text x="207" y="27" fill="#ffe3d7">HTML</text>
+
+    <rect x="294" y="1" width="125" height="42" rx="9" fill="#261b25" stroke="#785168"/>
+    <rect x="304" y="9" width="27" height="26" rx="5" fill="#f6a5cc"/>
+    <text x="317.5" y="27" text-anchor="middle" fill="#271522" font-size="14" font-weight="800">{ }</text>
+    <text x="340" y="27" fill="#ffe3f3">CSS</text>
+  </g>
+</svg>
