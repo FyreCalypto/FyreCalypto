@@ -109,17 +109,20 @@ dns or tcp.flags.syn == 1 or tls
 ### In memory of Ayrton Senna
 
 <p align="center">
+  <a href="https://commons.wikimedia.org/wiki/File:Senna_1988.jpg"><img src="./assets/ayrton-senna-memorial.webp" width="720" alt="Ayrton Senna driving his red-and-white McLaren in 1988, wearing his yellow helmet"></a>
+</p>
+
+<p align="center">
   <strong>21 March 1960 – 1 May 1994</strong><br>
   Three-time Formula 1 world champion · 1988, 1990, 1991
 </p>
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Senna_1988.jpg" width="420" alt="Ayrton Senna driving his red-and-white McLaren in 1988, wearing his yellow helmet"><br>
-  <sub>Photo by Instituto Ayrton Senna, cropped by Karpouzi · <a href="https://commons.wikimedia.org/wiki/File:Senna_1988.jpg">Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub>
+  At Interlagos in 1991, Senna won his home Grand Prix for the first time, driving the closing laps in sixth gear.
 </p>
 
 <p align="center">
-  Remembering the Brazilian driver who won at Interlagos in 1991 with only sixth gear for the closing laps.<br>
   <a href="https://www.formula1.com/en/information/drivers-hall-of-fame-ayrton-senna.FLD7ZtO0nUn7JzLEn5rOJ">Formula 1 Hall of Fame</a> &nbsp;·&nbsp;
-  <a href="https://institutoayrtonsenna.org.br/en/about-us/our-history/">Instituto Ayrton Senna</a>
+  <a href="https://institutoayrtonsenna.org.br/en/about-us/our-history/">Instituto Ayrton Senna</a><br>
+  <sub>Photo by Instituto Ayrton Senna, cropped by Karpouzi and adapted for this tribute · <a href="https://commons.wikimedia.org/wiki/File:Senna_1988.jpg">Original image</a> · <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></sub>
 </p>
