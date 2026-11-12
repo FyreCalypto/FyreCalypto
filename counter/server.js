@@ -91,9 +91,27 @@ async function readCount() {
   }
 }
 
+async function restoreCount() {
+  const stored = await readCount();
+  try {
+    const response = await fetch(
+      'https://raw.githubusercontent.com/FyreCalypto/FyreCalypto/main/assets/counter-snapshot.svg',
+      { signal: AbortSignal.timeout(5_000) },
+    );
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const match = /<title id="title">Profile counter: ([0-9]{1,30}) badge requests<\/title>/.exec(await response.text());
+    if (!match) throw new Error('No saved badge count');
+    const confirmed = BigInt(match[1]);
+    if (confirmed > stored) return confirmed;
+  } catch (error) {
+    console.warn('Could not restore the GitHub badge count:', error.message);
+  }
+  return stored;
+}
+
 const [sprites, initialCount] = await Promise.all([
   Promise.all(spriteHashes.map(loadSprite)),
-  readCount(),
+  restoreCount(),
 ]);
 await mkdir(stateDir, { recursive: true });
 

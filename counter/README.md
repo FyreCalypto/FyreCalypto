@@ -21,7 +21,7 @@ A GET request for `/counter.svg` adds one to the stored total. GitHub proxies an
 
 If the host cannot fetch from GitHub at startup, place the exact ten animated `rule34` digit GIFs from the pinned source in a local directory and point `COUNTER_THEME_DIR` there. The service checks the same hashes in either mode.
 
-The launcher restarts the Node worker if it exits and keeps the count on disk. W3Schools controls startup of the entire Space when it hibernates.
+The launcher restarts the Node worker if it exits. The app stores its count on disk and recovers the last confirmed GitHub badge count if a fresh Space starts with a lower total. W3Schools controls startup of the entire Space when it hibernates.
 
 ## Keep the Space warm
 
