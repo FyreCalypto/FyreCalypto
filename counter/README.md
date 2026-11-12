@@ -2,9 +2,11 @@
 
 This Node.js service serves a badge in Moe Counter’s regular `gelbooru` theme. It uses the ten digit sprites from a pinned [Moe Counter revision](https://github.com/journey-ad/Moe-Counter/tree/ba5b1fa9758b467e4436128ca2c9708f99d2977b/assets/theme/gelbooru). The sprites are loaded from GitHub at startup and checked against their Git blob hashes. Upstream credits the theme to Gelbooru and excludes theme art from its MIT license.
 
+The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/preview.svg).
+
 ## Deploy to W3Schools Spaces
 
-1. Use a Node.js Full Stack Space with Node.js 18 or later. Copy `server.mjs` and `package.json` into its app directory, or merge the start script into the existing template. The start command is `npm start`.
+1. Use a Node.js Full Stack Space with Node.js 18 or later. Copy `server.js` and `package.json` into its app directory, or merge the start script into the existing template. The start command is `npm start`.
 2. Keep one running instance and use a directory that persists across restarts for `COUNTER_DATA_DIR`. By default the service writes to `counter-state/` next to the server file. Keep this directory between deployments.
 3. Open `/healthz`, then `/preview.svg` on the public Space URL. The preview shows the current number without incrementing it.
 4. After verifying the preview, add the following to the profile README, replacing the placeholder origin:

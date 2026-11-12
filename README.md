@@ -75,3 +75,8 @@ dns or tcp.flags.syn == 1 or tls
   <a href="https://github.com/FyreCalypto#js-contribution-activity-description">Live contribution graph ↗</a> &nbsp;·&nbsp;
   <a href="https://github.com/FyreCalypto?tab=repositories">All repositories ↗</a>
 </p>
+
+<p align="center">
+  <a href="https://countergithub.w3spaces.com/preview.svg"><img src="https://countergithub.w3spaces.com/counter.svg" width="320" alt="Gelbooru badge request counter"></a><br>
+  <sub>Badge requests</sub>
+</p>
