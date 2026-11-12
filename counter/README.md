@@ -25,6 +25,6 @@ The launcher restarts the Node worker if it exits. The app stores its count on d
 
 ## Keep the Space warm
 
-The [Counter health check workflow](../.github/workflows/counter-health.yml) requests `/preview.svg` every five minutes and retries during warm-up. It updates the GitHub-hosted badge only after it receives a valid snapshot with a higher count. The last confirmed badge remains visible during outages. The profile still loads `/counter.svg` to count requests when the host responds.
+The [Counter health check workflow](../.github/workflows/counter-health.yml) requests `/preview.svg` every five minutes and retries during warm-up. It saves a higher verified count for startup recovery. The profile embeds the live `/counter.svg` response, so the badge can be temporarily unavailable while the Space starts.
 
 GitHub can delay scheduled runs or disable them after 60 days without repository activity. To run a check manually or re-enable it, open **Actions → Counter health check**.
