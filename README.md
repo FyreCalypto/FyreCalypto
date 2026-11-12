@@ -77,6 +77,6 @@ dns or tcp.flags.syn == 1 or tls
 </p>
 
 <p align="center">
-  <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34"><img src="https://countergithub.w3spaces.com/counter.svg?theme=rule34" width="320" alt="Animated Rule 34 badge request counter"></a><br>
+  <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34"><img src="https://countergithub.w3spaces.com/counter.svg?theme=rule34" width="320" alt="Animated badge request counter"></a><br>
   <sub>Badge requests</sub>
 </p>
