@@ -6,7 +6,7 @@ The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/
 
 ## Deploy to W3Schools Spaces
 
-1. Use a Node.js Full Stack Space with Node.js 18 or later. Copy `server.js` and `package.json` into its app directory, or merge the start script into the existing template. The start command is `npm start`.
+1. Use a Node.js Full Stack Space with Node.js 18 or later. Copy `server.js`, `launch.js`, and `package.json` into its app directory. Both `npm start` and `npm run dev` run the launcher. The empty `dependencies` object lets the Spaces Package Manager read the manifest.
 2. Keep one running instance and use a directory that persists across restarts for `COUNTER_DATA_DIR`. By default the service writes to `counter-state/` next to the server file. Keep this directory between deployments.
 3. Open `/healthz`, then `/preview.svg` on the public Space URL. The preview shows the current number without incrementing it.
 4. After verifying the preview, add the following to the profile README, replacing the placeholder origin:
@@ -20,6 +20,8 @@ The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/
 A GET request for `/counter.svg` adds one to the stored total. GitHub proxies and caches images, so the number represents badge requests that reached the Space. The application stores only the total.
 
 If the host cannot fetch from GitHub at startup, place the exact ten animated `rule34` digit GIFs from the pinned source in a local directory and point `COUNTER_THEME_DIR` there. The service checks the same hashes in either mode.
+
+The launcher restarts the Node worker if it exits and keeps the count on disk. W3Schools controls startup of the entire Space when it hibernates.
 
 ## Keep the Space warm
 

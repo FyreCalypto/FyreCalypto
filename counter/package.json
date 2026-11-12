@@ -5,9 +5,12 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node launch.js",
+    "dev": "node launch.js"
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "dependencies": {},
+  "devDependencies": {}
 }
