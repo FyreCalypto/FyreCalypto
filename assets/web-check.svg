@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="420" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">Web Check mirror</title>
+  <desc id="desc">Alicia Sykes’s site diagnostics toolkit. The illustrated console shows DNS, TLS, and HTTP header diagnostics.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1">
+      <stop stop-color="#24123f"/>
+      <stop offset=".58" stop-color="#120b26"/>
+      <stop offset="1" stop-color="#100923"/>
+    </linearGradient>
+    <linearGradient id="rim" x2="1" y2="1">
+      <stop stop-color="#ff65c8"/>
+      <stop offset=".46" stop-color="#986adc"/>
+      <stop offset="1" stop-color="#574081"/>
+    </linearGradient>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#ff65c8" opacity=".28"/>
+    </pattern>
+  </defs>
+
+  <path d="M14 1H406L419 14V186L406 199H14L1 186V14Z" fill="url(#surface)" stroke="url(#rim)" stroke-width="2"/>
+  <path d="M14 1H123L115 6H9Z" fill="#ff65c8"/>
+  <path d="M298 14h101l7 7v55H298z" fill="url(#dots)"/>
+  <path d="M300 63h16l5-8 7 12 9-24 8 14h10l5-7h28" fill="none" stroke="#ff65c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="388" cy="50" r="3" fill="#ffd479"/>
+
+  <g font-family="'IBM Plex Mono', Consolas, monospace">
+    <text x="24" y="31" fill="#ff9bdd" font-size="12" font-weight="700" letter-spacing="1.5">SITE DIAGNOSTICS</text>
+    <text x="24" y="81" fill="#d7c9f4" font-size="12">Mirror of Alicia Sykes’s toolkit</text>
+  </g>
+  <text x="22" y="63" fill="#fff5fc" font-family="'Inter', 'Segoe UI', sans-serif" font-size="33" font-weight="800" letter-spacing="-.9">Web Check</text>
+
+  <rect x="22" y="98" width="376" height="80" rx="8" fill="#100a1e" stroke="#51366c"/>
+  <path d="M22 111h376" stroke="#51366c"/>
+  <g fill="#bf8ded">
+    <circle cx="32" cy="105" r="1.5"/><circle cx="38" cy="105" r="1.5"/><circle cx="44" cy="105" r="1.5"/>
+  </g>
+  <path d="M147 122v45m126-45v45" fill="none" stroke="#3a2858"/>
+
+  <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#ff83d1">
+      <path d="M85 133v7m-12 0h24m-24 0v4m24-4v4"/>
+      <rect x="81" y="125" width="8" height="8" rx="1.5"/>
+      <rect x="69" y="144" width="8" height="6" rx="1.5"/>
+      <rect x="93" y="144" width="8" height="6" rx="1.5"/>
+    </g>
+    <g stroke="#b7a2ff">
+      <rect x="199" y="137" width="22" height="13" rx="2"/>
+      <path d="M204 137v-5a6 6 0 0 1 12 0v5m-6 5v3"/>
+    </g>
+    <g stroke="#ffd479">
+      <rect x="323" y="125" width="24" height="24" rx="2"/>
+      <path d="M323 131h24m-18 6h12m-12 5h8"/>
+    </g>
+  </g>
+  <g font-family="'IBM Plex Mono', Consolas, monospace" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="85" y="166" fill="#ff9bdd">DNS</text>
+    <text x="210" y="166" fill="#cdbfff">TLS</text>
+    <text x="335" y="166" fill="#ffdf9d">HTTP HEADERS</text>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="671" height="44" viewBox="0 0 671 44" role="img" aria-labelledby="title">
+  <title id="title">DNS, TCP/IP, TLS, HTTP, Wireshark and JavaScript</title>
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="17" font-weight="700">
+    <g transform="translate(1 0)">
+      <rect x="1" y="1" width="81" height="42" rx="9" fill="#1c1231" stroke="#71f4ec" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#71f4ec"/>
+      <text x="33" y="27" fill="#71f4ec">DNS</text>
+    </g>
+    <g transform="translate(93 0)">
+      <rect x="1" y="1" width="103" height="42" rx="9" fill="#1c1231" stroke="#b4a0ff" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#b4a0ff"/>
+      <text x="33" y="27" fill="#b4a0ff">TCP/IP</text>
+    </g>
+    <g transform="translate(207 0)">
+      <rect x="1" y="1" width="81" height="42" rx="9" fill="#1c1231" stroke="#ff9edb" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#ff9edb"/>
+      <text x="33" y="27" fill="#ff9edb">TLS</text>
+    </g>
+    <g transform="translate(299 0)">
+      <rect x="1" y="1" width="90" height="42" rx="9" fill="#1c1231" stroke="#ffc787" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#ffc787"/>
+      <text x="33" y="27" fill="#ffc787">HTTP</text>
+    </g>
+    <g transform="translate(400 0)">
+      <rect x="1" y="1" width="126" height="42" rx="9" fill="#1c1231" stroke="#77ceff" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#77ceff"/>
+      <text x="33" y="27" fill="#77ceff">Wireshark</text>
+    </g>
+    <g transform="translate(537 0)">
+      <rect x="1" y="1" width="131" height="42" rx="9" fill="#1c1231" stroke="#ffe47e" stroke-opacity=".72"/>
+      <path d="M16 19l4-4 4 4-4 4z" fill="#ffe47e"/>
+      <text x="33" y="27" fill="#ffe47e">JavaScript</text>
+    </g>
+  </g>
+</svg>

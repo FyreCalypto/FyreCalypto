@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" width="420" height="200" role="img" aria-labelledby="title desc">
+  <title id="title">Ultraviolet fork</title>
+  <desc id="desc">Titanium Network’s browser proxy. The illustration traces requests from a browser through a service worker to the web.</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1">
+      <stop stop-color="#1b1742"/>
+      <stop offset=".57" stop-color="#13102b"/>
+      <stop offset="1" stop-color="#0d142e"/>
+    </linearGradient>
+    <linearGradient id="rim" x2="1" y2="1">
+      <stop stop-color="#5af2f7"/>
+      <stop offset=".49" stop-color="#a791ff"/>
+      <stop offset="1" stop-color="#5c4b9d"/>
+    </linearGradient>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".8" fill="#5af2f7" opacity=".3"/>
+    </pattern>
+  </defs>
+
+  <path d="M14 1H406L419 14V186L406 199H14L1 186V14Z" fill="url(#surface)" stroke="url(#rim)" stroke-width="2"/>
+  <path d="M14 1H123L115 6H9Z" fill="#5af2f7"/>
+  <path d="M298 14h101l7 7v55H298z" fill="url(#dots)"/>
+  <path d="M303 62h31l11-13h38m-57-10h27l10-10h20" fill="none" stroke="#5af2f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="383" cy="49" r="3" fill="#5af2f7"/><circle cx="383" cy="29" r="3" fill="#a791ff"/>
+
+  <g font-family="'IBM Plex Mono', Consolas, monospace">
+    <text x="24" y="31" fill="#86f6fa" font-size="12" font-weight="700" letter-spacing="1.5">BROWSER PROXY</text>
+    <text x="24" y="81" fill="#d7c9f4" font-size="12">Fork of Titanium Network’s proxy</text>
+  </g>
+  <text x="22" y="63" fill="#f5f6ff" font-family="'Inter', 'Segoe UI', sans-serif" font-size="33" font-weight="800" letter-spacing="-.9">Ultraviolet</text>
+
+  <rect x="22" y="98" width="376" height="80" rx="8" fill="#100e25" stroke="#413971"/>
+  <path d="M22 111h376" stroke="#413971"/>
+  <g fill="#9d96ef">
+    <circle cx="32" cy="105" r="1.5"/><circle cx="38" cy="105" r="1.5"/><circle cx="44" cy="105" r="1.5"/>
+  </g>
+
+  <g fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#63f2f4">
+      <rect x="72" y="125" width="26" height="23" rx="2"/>
+      <path d="M72 131h26m-21 6h12m-12 5h9"/>
+    </g>
+    <path d="M116 138h61m-6-4 6 4-6 4" stroke="#6ea9cf"/>
+    <g stroke="#bfacff">
+      <rect x="201" y="129" width="18" height="18" rx="2"/>
+      <path d="M206 125v4m8-4v4m-8 18v4m8-4v4m-17-17h4m-4 8h4m18-8h4m-4 8h4m-16-7h6v6h-6z"/>
+    </g>
+    <path d="M243 138h61m-6-4 6 4-6 4" stroke="#8789da"/>
+    <g stroke="#ff8bd8">
+      <circle cx="335" cy="137" r="12"/>
+      <ellipse cx="335" cy="137" rx="5" ry="12"/>
+      <path d="M323 137h24"/>
+    </g>
+  </g>
+  <g font-family="'IBM Plex Mono', Consolas, monospace" font-size="13" font-weight="700" text-anchor="middle">
+    <text x="85" y="166" fill="#86f6fa">BROWSER</text>
+    <text x="210" y="166" fill="#cbbaff">SERVICE WORKER</text>
+    <text x="335" y="166" fill="#fface3">WEB</text>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="152" viewBox="0 0 720 152" role="img" aria-labelledby="title description">
+  <title id="title">GitHub public repository snapshot</title>
+  <desc id="description">GitHub repository search returned 51 public repositories on November 11, 2026. 19 were non-forks and 32 were forks.</desc>
+  <defs>
+    <linearGradient id="panel" x2="1" y2="1">
+      <stop stop-color="#1c0c32"/>
+      <stop offset="1" stop-color="#100923"/>
+    </linearGradient>
+    <linearGradient id="nonfork" x2="1" y2="0">
+      <stop stop-color="#ff65c8"/>
+      <stop offset="1" stop-color="#a791ff"/>
+    </linearGradient>
+    <linearGradient id="fork" x2="1" y2="0">
+      <stop stop-color="#a791ff"/>
+      <stop offset="1" stop-color="#5af2f7"/>
+    </linearGradient>
+    <pattern id="ticks" width="8" height="16" patternUnits="userSpaceOnUse">
+      <path d="M1 2v12" stroke="#100923" stroke-opacity=".25"/>
+    </pattern>
+    <clipPath id="rail"><rect x="240" y="112" width="444" height="14" rx="4"/></clipPath>
+  </defs>
+
+  <rect x=".5" y=".5" width="719" height="151" rx="17" fill="url(#panel)" stroke="#493269"/>
+  <path d="M0 48h720M214 48v103" fill="none" stroke="#493269"/>
+
+  <g font-family="Consolas, 'Liberation Mono', monospace" font-size="14" letter-spacing="1.1">
+    <path d="M24 25h3l2-5 3 10 2-5h5" fill="none" stroke="#ff65c8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="50" y="30" fill="#f6eaff" font-weight="700">GITHUB SEARCH SNAPSHOT</text>
+    <text x="685" y="30" text-anchor="end" fill="#d3c0f1">2026-11-11</text>
+  </g>
+
+  <text x="28" y="104" font-family="Segoe UI, system-ui, sans-serif" font-size="56" font-weight="800" letter-spacing="-3" fill="#fff4ff">51</text>
+  <text x="31" y="126" font-family="Consolas, 'Liberation Mono', monospace" font-size="14" letter-spacing=".7" fill="#dfcff6">PUBLIC REPOS</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="650">
+    <circle cx="244" cy="83" r="3.5" fill="#ff65c8"/>
+    <text x="256" y="89" fill="#ffd6f1">19 non-forks</text>
+    <circle cx="425" cy="83" r="3.5" fill="#5af2f7"/>
+    <text x="437" y="89" fill="#b8f9ff">32 forks</text>
+  </g>
+
+  <g clip-path="url(#rail)">
+    <rect x="240" y="112" width="165.41" height="14" fill="url(#nonfork)"/>
+    <rect x="405.41" y="112" width="278.59" height="14" fill="url(#fork)"/>
+    <rect x="240" y="112" width="444" height="14" fill="url(#ticks)"/>
+    <path d="M405.41 112v14" stroke="#100923" stroke-width="3"/>
+  </g>
+</svg>
