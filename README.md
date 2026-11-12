@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/arcade.svg" width="100%" alt="FyreCalypto · Cybersecurity and networking. A pixel-art packet gremlin watches packets fly past a neon terminal.">
+  <img src="./assets/arcade-hatman.svg" width="100%" alt="FyreCalypto · Cybersecurity and networking. The Hatman watches packets fly past a neon terminal.">
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ I’m curious about what happens after you hit Enter: where packets go, what get
 </p>
 
 <details>
-<summary><strong>👾 Open the Packet Gremlin’s lab</strong></summary>
+<summary><strong>🌑 Open the Hatman’s lab</strong></summary>
 
 A fresh HTTPS connection over TCP usually goes like this:
 
