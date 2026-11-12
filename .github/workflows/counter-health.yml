@@ -4,32 +4,33 @@ on:
   push:
     paths:
       - '.github/workflows/counter-health.yml'
+      - 'counter/refresh_badge.py'
   schedule:
     - cron: '2-57/5 * * * *'
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  contents: write
+
+concurrency:
+  group: counter-snapshot
+  cancel-in-progress: false
 
 jobs:
   check-counter:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - name: Wait for the public counter
-        shell: bash
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Wake the counter and refresh the badge when ready
+        run: python3 counter/refresh_badge.py
+      - name: Publish the confirmed badge
         run: |
-          for attempt in {1..12}; do
-            if body=$(curl --fail --silent --show-error --connect-timeout 5 --max-time 8 \
-                "https://countergithub.w3spaces.com/healthz?_refresh=$(date +%s%3N)") &&
-                [[ "$body" == "Counter ready" ]]; then
-              echo "Counter ready (attempt $attempt)"
-              exit 0
-            fi
-
-            if (( attempt < 12 )); then
-              sleep 5
-            fi
-          done
-
-          echo "::error::The counter did not become ready after 12 checks."
-          exit 1
+          if git diff --quiet -- assets/counter-snapshot.svg; then
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/counter-snapshot.svg
+          git commit -m 'Refresh the counter badge snapshot'
+          git push

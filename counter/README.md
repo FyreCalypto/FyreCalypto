@@ -20,3 +20,9 @@ The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/
 A GET request for `/counter.svg` adds one to the stored total. GitHub proxies and caches images, so the number represents badge requests that reached the Space. The application stores only the total.
 
 If the host cannot fetch from GitHub at startup, place the exact ten animated `rule34` digit GIFs from the pinned source in a local directory and point `COUNTER_THEME_DIR` there. The service checks the same hashes in either mode.
+
+## Keep the Space warm
+
+The [Counter health check workflow](../.github/workflows/counter-health.yml) requests `/preview.svg` every five minutes and retries during warm-up. It updates the GitHub-hosted badge only after it receives a valid snapshot with a higher count. The last confirmed badge remains visible during outages. The profile still loads `/counter.svg` to count requests when the host responds.
+
+GitHub can delay scheduled runs or disable them after 60 days without repository activity. To run a check manually or re-enable it, open **Actions → Counter health check**.
