@@ -1,6 +1,6 @@
 # Profile counter
 
-This Node.js service serves a badge in Moe Counter’s regular `gelbooru` theme. It uses the ten digit sprites from a pinned [Moe Counter revision](https://github.com/journey-ad/Moe-Counter/tree/ba5b1fa9758b467e4436128ca2c9708f99d2977b/assets/theme/gelbooru). The sprites are loaded from GitHub at startup and checked against their Git blob hashes. Upstream credits the theme to Gelbooru and excludes theme art from its MIT license.
+This Node.js service serves a badge in Moe Counter’s animated `rule34` theme. It uses the ten digit sprites from a pinned [Moe Counter revision](https://github.com/journey-ad/Moe-Counter/tree/ba5b1fa9758b467e4436128ca2c9708f99d2977b/assets/theme/rule34). The sprites are loaded from GitHub at startup and checked against their Git blob hashes. Moe Counter excludes theme artwork from its MIT license.
 
 The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/preview.svg).
 
@@ -19,4 +19,4 @@ The live badge runs on [the W3Schools Space](https://countergithub.w3spaces.com/
 
 A GET request for `/counter.svg` adds one to the stored total. GitHub proxies and caches images, so the number represents badge requests that reached the Space. The application stores only the total.
 
-If the host cannot fetch from GitHub at startup, place the exact ten regular `gelbooru` digit GIFs from the pinned source in a local directory and point `GELBOORU_THEME_DIR` there. The service checks the same hashes in either mode.
+If the host cannot fetch from GitHub at startup, place the exact ten animated `rule34` digit GIFs from the pinned source in a local directory and point `COUNTER_THEME_DIR` there. The service checks the same hashes in either mode.

@@ -10,31 +10,31 @@ const stateFile = join(stateDir, 'requests.txt');
 const tempFile = join(stateDir, 'requests.tmp');
 const themeUrl =
   'https://raw.githubusercontent.com/journey-ad/Moe-Counter/' +
-  'ba5b1fa9758b467e4436128ca2c9708f99d2977b/assets/theme/gelbooru/';
+  'ba5b1fa9758b467e4436128ca2c9708f99d2977b/assets/theme/rule34/';
 const spriteHashes = [
-  '6c348e5352a9ac920c220253fbc679721bf5a45f',
-  '1c33ee35a3da29ca14d941a5da94a86f3b519016',
-  'e6df16c12465cf73fee59fe8835c2e4e181a668d',
-  '3ee1bcd978a3b11f87c60181a29dcf6abab23018',
-  'aabf121752839a4dc6e5f3bd8d024374c69e64bb',
-  '46f4940bf4b6364c36931350c9f7569e7c3a60c7',
-  'cd316a0a32366a53bf5824e423f9c22381a9d018',
-  '6019a72f004f5ed7737d82e4cdea810ca331f881',
-  '9baa78f235304ad0a689c17a0f730b2b8808b9d5',
-  '1e3f85f7252995227fc7bb23d46423e83b406d69',
+  '3512b00c225822eac239c2209d5503b65373e6fa',
+  'b292eddd9d4d414ca8a53f36da052685eea1d285',
+  '6d3a68a8019ad06d7691ea2509b06539609051c7',
+  '1b91cb3631515e7c29600f4e6b24cea99c0c1555',
+  '7dec2c237a2188ae963bc4e5a19a3ab8189a9694',
+  'e89449debeac71e0e6c05a04ff5400c8ffa20340',
+  '3869b82645f8d3017bb80cb922ad407a4010bb3e',
+  '5b295130a8091d93544bff97d481c131d7ece147',
+  'e75867aff411f686cbb692174b431a989f86be82',
+  '1c592606809a6cc6693343a8dfde3db1f79ab389',
 ];
 
 async function loadSprite(expectedHash, digit) {
   const filename = `${digit}.gif`;
   let bytes;
 
-  if (process.env.GELBOORU_THEME_DIR) {
-    bytes = await readFile(join(process.env.GELBOORU_THEME_DIR, filename));
+  if (process.env.COUNTER_THEME_DIR) {
+    bytes = await readFile(join(process.env.COUNTER_THEME_DIR, filename));
   } else {
     const response = await fetch(new URL(filename, themeUrl), {
       signal: AbortSignal.timeout(15_000),
     });
-    if (!response.ok) throw new Error(`Could not load Gelbooru digit ${digit}: HTTP ${response.status}`);
+    if (!response.ok) throw new Error(`Could not load Rule 34 digit ${digit}: HTTP ${response.status}`);
     bytes = Buffer.from(await response.arrayBuffer());
   }
 
@@ -43,7 +43,7 @@ async function loadSprite(expectedHash, digit) {
     .update(bytes)
     .digest('hex');
 
-  if (hash !== expectedHash) throw new Error(`Unexpected Gelbooru digit ${digit}`);
+  if (hash !== expectedHash) throw new Error(`Unexpected Rule 34 digit ${digit}`);
 
   return {
     width: bytes.readUInt16LE(6),
