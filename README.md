@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="#my-projects">My projects</a> &nbsp;·&nbsp;
+  <a href="#credentials">Credentials</a> &nbsp;·&nbsp;
   <a href="#whoami">Who am I?</a> &nbsp;·&nbsp;
   <a href="https://github.com/FyreCalypto#js-contribution-activity-description">GitHub activity</a>
 </p>
@@ -20,6 +21,29 @@
 
 - **[AdventureGameTest](https://github.com/FyreCalypto/AdventureGameTest)** · My first calculator project in TI-BASIC.
 - **[BiologyProject](https://github.com/FyreCalypto/BiologyProject)** · A single-page site I made to explain cellular metabolism and signaling.
+
+<img src="./assets/cable.svg" width="100%" alt="">
+
+### Credentials
+
+<p align="center">
+  <strong>Cisco Certified Support Technician</strong><br>
+  <a href="https://www.credly.com/badges/29ce30b1-e542-4637-83f8-396c6ab2affa/public_url"><img src="https://images.credly.com/size/220x220/images/fb647b84-b5ee-44fc-979f-24dd67bf6703/image.png" width="88" height="88" alt="Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity)"></a>
+  <a href="https://www.credly.com/badges/9b95825d-45b1-4c9a-98e2-7ccad62a5459/public_url"><img src="https://images.credly.com/size/220x220/images/c60f9007-64bb-42ed-869b-e1f05d6d77f2/image.png" width="88" height="88" alt="Cisco Certified Support Technician Networking (CCST Networking)"></a>
+  <a href="https://www.credly.com/badges/8c6ee974-5398-489e-9d5f-ed4a97c759bf/public_url"><img src="https://images.credly.com/size/220x220/images/0d9a7043-e0e8-4791-a067-1af5fd336afc/image.png" width="88" height="88" alt="Cisco Certified Support Technician IT Support (CCST IT Support)"></a>
+  <br><sub>Cybersecurity · Networking · IT Support</sub>
+</p>
+
+<p align="center">
+  <strong>Certiport</strong><br>
+  <a href="https://www.credly.com/badges/738455a8-f6a3-4a26-b997-eae610d08c6a/public_url"><img src="https://images.credly.com/size/220x220/images/25a0a5f5-56db-4560-8549-14889b105db2/image.png" width="88" height="88" alt="Network Security Support Technician"></a>
+  <a href="https://www.credly.com/badges/140306e2-b06c-498e-b088-996a5ed90e71/public_url"><img src="https://images.credly.com/size/220x220/images/2eebb247-4311-497a-bda0-487a5365648e/Technical_Support_Badge_1200x1200px.png" width="88" height="88" alt="IT Technical Support Specialist"></a>
+  <br><sub>Network Security Support Technician · IT Technical Support Specialist</sub>
+</p>
+
+<p align="center">
+  <a href="https://www.credly.com/users/dragos-todoran/badges">View all 13 badges on Credly ↗</a>
+</p>
 
 <img src="./assets/cable.svg" width="100%" alt="">
 
