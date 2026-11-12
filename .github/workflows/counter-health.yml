@@ -1,0 +1,35 @@
+name: Counter health check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/counter-health.yml'
+  schedule:
+    - cron: '2-57/5 * * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  check-counter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Wait for the public counter
+        shell: bash
+        run: |
+          for attempt in {1..12}; do
+            if body=$(curl --fail --silent --show-error --connect-timeout 5 --max-time 8 \
+                "https://countergithub.w3spaces.com/healthz?_refresh=$(date +%s%3N)") &&
+                [[ "$body" == "Counter ready" ]]; then
+              echo "Counter ready (attempt $attempt)"
+              exit 0
+            fi
+
+            if (( attempt < 12 )); then
+              sleep 5
+            fi
+          done
+
+          echo "::error::The counter did not become ready after 12 checks."
+          exit 1
