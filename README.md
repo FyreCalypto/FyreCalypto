@@ -77,7 +77,7 @@ dns or tcp.flags.syn == 1 or tls
 </p>
 
 <p align="center">
-  <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34"><img src="./assets/counter-snapshot.svg" width="320" alt="Animated badge request counter"></a><br>
+  <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34"><img src="https://raw.githubusercontent.com/FyreCalypto/FyreCalypto/9ac56844e68435c94ae14078bdb5b46a3a728b78/assets/counter-snapshot.svg" width="320" alt="Animated badge request counter"></a><br>
   <sub>Last confirmed badge count · <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34">Live counter ↗</a></sub>
   <!-- Keep the existing request counter active when its host is available. -->
   <img src="https://countergithub.w3spaces.com/counter.svg?theme=rule34&amp;source=profile" width="1" height="1" alt="">
