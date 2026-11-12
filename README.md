@@ -1,35 +1,40 @@
 <p align="center">
-  <img src="./assets/fyre-banner.svg" width="100%" alt="FyreCalypto — Browser games &amp; web experiments">
+  <img src="./assets/network-map.svg" width="100%" alt="FyreCalypto · Cybersecurity and networking. An animated packet moves from a client through a gateway to a server.">
 </p>
 
 <p align="center">
-  <a href="#-projects">Projects</a> ·
-  <a href="https://github.com/FyreCalypto?tab=repositories">All repos</a> ·
-  <a href="https://github.com/FyreCalypto#contribution-activity">Activity</a>
+  <a href="#focus">Focus</a> &nbsp;·&nbsp;
+  <a href="#repositories">Repositories</a> &nbsp;·&nbsp;
+  <a href="https://github.com/FyreCalypto#contribution-activity">GitHub activity</a>
 </p>
 
-### 🔥 `whoami`
+### Focus
 
-```js
-const fyreCalypto = {
-  experiments: ["browser games", "small web apps"],
-  tools: ["JavaScript", "HTML", "CSS"],
-  motto: "Open a tab and see what happens."
-};
+I’m interested in how traffic moves, where trust is established, and what defenders can learn from packets and logs.
+
+- **Networking** · DNS, routing, TCP/IP, and packet analysis
+- **Defensive security** · TLS, firewall rules, and network monitoring
+- **Web security** · HTTP headers, browser proxies, and access controls
+
+<details>
+<summary><strong>Trace an HTTPS request</strong></summary>
+
+For a fresh HTTPS connection over TCP, the browser resolves the host through **DNS** if needed, opens a **TCP** connection, negotiates **TLS**, and sends the **HTTP** request through the encrypted connection.
+
+In Wireshark, this display filter shows DNS, packets with the TCP SYN flag, and traffic Wireshark recognizes as TLS:
+
+```text
+dns or tcp.flags.syn == 1 or tls
 ```
 
-### 🛠️ Stack
+</details>
 
-<img src="./assets/stack.svg" width="420" alt="JavaScript, HTML, and CSS">
+### Repositories
 
-### 🎮 Projects
-
-| Project | What you'll find |
+| Repository | What to look at |
 | :--- | :--- |
-| [Hall Pass System](https://github.com/FyreCalypto/hall-pass-system) | A browser prototype for scheduling passes and checking arrivals. |
-| [GameNas](https://github.com/FyreCalypto/thepizzaedition.github.io) | A collection of browser games, from 2048 to Run 3. |
-| [Henry Stickmin: Bank](https://github.com/FyreCalypto/henry-stickman-bank) · [Prison](https://github.com/FyreCalypto/henry-stickman-prison) | Browser builds of *Breaking the Bank* and *Escaping the Prison*. |
+| [Web Check mirror](https://github.com/FyreCalypto/washpods) | Alicia Sykes’s website diagnostics toolkit, with checks for DNS records, TLS, and HTTP response headers. |
+| [Ultraviolet fork](https://github.com/FyreCalypto/Ultraviolet) | Titanium Network’s browser proxy. Its service worker shows how requests are intercepted and forwarded. |
+| [Hall Pass System](https://github.com/FyreCalypto/hall-pass-system) | A browser prototype for scheduling passes and tracking arrivals, with views for different user roles. |
 
-### ⚡ GitHub activity
-
-[Contribution history](https://github.com/FyreCalypto#contribution-activity) · [Pull requests](https://github.com/pulls?q=is%3Apr+author%3AFyreCalypto) · [Starred repos](https://github.com/FyreCalypto?tab=stars)
+[Browse all repositories ↗](https://github.com/FyreCalypto?tab=repositories)
