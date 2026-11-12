@@ -2,6 +2,7 @@ name: Counter health check
 
 on:
   push:
+    branches: [main]
     paths:
       - '.github/workflows/counter-health.yml'
       - 'counter/refresh_badge.py'
@@ -18,19 +19,39 @@ concurrency:
 
 jobs:
   check-counter:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-      - name: Wake the counter and refresh the badge when ready
-        run: python3 counter/refresh_badge.py
-      - name: Publish the confirmed badge
+        with:
+          ref: main
+      - name: Publish the confirmed badge at a new image URL
         run: |
-          if git diff --quiet -- assets/counter-snapshot.svg; then
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/counter-snapshot.svg
-          git commit -m 'Refresh the counter badge snapshot'
-          git push
+
+          for attempt in 1 2; do
+            python3 counter/refresh_badge.py
+            if git diff --quiet -- assets/counter-snapshot.svg; then
+              exit 0
+            fi
+
+            # Push the snapshot and the README permalink together.
+            git add assets/counter-snapshot.svg
+            git commit -m 'Refresh the counter badge snapshot'
+            python3 counter/refresh_badge.py --pin "$(git rev-parse HEAD)"
+            git add README.md
+            git commit -m 'Point the profile at the refreshed badge'
+            if git push origin HEAD:refs/heads/main; then
+              exit 0
+            fi
+
+            if [ "$attempt" = 1 ]; then
+              # Rebuild both commits if main advanced while we fetched the badge.
+              git fetch origin main
+              git reset --hard FETCH_HEAD
+            fi
+          done
+
+          exit 1

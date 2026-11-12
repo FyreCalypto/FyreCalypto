@@ -10,6 +10,13 @@ from pathlib import Path
 ORIGIN = "https://countergithub.w3spaces.com"
 SVG = "{http://www.w3.org/2000/svg}"
 DESTINATION = Path("assets/counter-snapshot.svg")
+PROFILE = Path("README.md")
+BADGE_BASE = b"https://raw.githubusercontent.com/FyreCalypto/FyreCalypto/"
+BADGE_SOURCE = re.compile(
+    rb'(?<=src=")(?:\./assets/counter-snapshot\.svg|'
+    + re.escape(BADGE_BASE) + rb'[0-9a-f]{40}/assets/counter-snapshot\.svg)(?=")'
+)
+MAX_ATTEMPTS = 8
 LIMIT = 200_000
 TITLE = re.compile(r"Profile counter: ([0-9]{1,30}) badge requests")
 DIGIT = re.compile(r"digit-[0-9]")
@@ -74,9 +81,19 @@ def read_badge(payload):
     return count, ET.tostring(clean, encoding="unicode") + "\n"
 
 
+def pin_badge(commit):
+    if not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("expected a full Git commit ID")
+    source = BADGE_BASE + commit.encode("ascii") + b"/assets/counter-snapshot.svg"
+    updated, matches = BADGE_SOURCE.subn(source, PROFILE.read_bytes())
+    if matches != 1:
+        raise ValueError("expected exactly one counter badge image in README.md")
+    PROFILE.write_bytes(updated)
+
+
 def refresh():
     last = read_badge(DESTINATION.read_bytes())[0] if DESTINATION.exists() else -1
-    for attempt in range(1, 7):
+    for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
             url = f"{ORIGIN}/preview.svg?_refresh={time.time_ns()}"
             with urllib.request.urlopen(url, timeout=8) as response:
@@ -92,13 +109,15 @@ def refresh():
             return
         except (OSError, ValueError, ET.ParseError, binascii.Error) as error:
             print(f"Attempt {attempt}: {error}")
-            if attempt < 6:
-                time.sleep(5)
+            if attempt < MAX_ATTEMPTS:
+                time.sleep(10)
     print("::warning::Counter is warming up or unavailable. The GitHub badge still shows the last confirmed count.")
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 3 and sys.argv[1] == "--pin":
+        pin_badge(sys.argv[2])
+    elif len(sys.argv) == 3:
         _, svg = read_badge(Path(sys.argv[1]).read_bytes())
         Path(sys.argv[2]).write_text(svg, encoding="utf-8")
     else:
