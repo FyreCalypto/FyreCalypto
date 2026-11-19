@@ -27,6 +27,12 @@
 ### Credentials
 
 <p align="center">
+  <strong>CompTIA</strong><br>
+  <a href="https://www.credly.com/badges/5a5345ff-bd3d-482a-a979-ce684317caf2"><img src="https://images.credly.com/size/680x680/images/f6d62c5d-1e1d-4de6-92ee-8dc8c80b1c7b/blob" width="88" height="88" alt="CompTIA A+ ce Certification"></a>
+  <br><sub>CompTIA A+ ce Certification</sub>
+</p>
+
+<p align="center">
   <strong>Cisco Certified Support Technician</strong><br>
   <a href="https://www.credly.com/badges/29ce30b1-e542-4637-83f8-396c6ab2affa/public_url"><img src="https://images.credly.com/size/220x220/images/fb647b84-b5ee-44fc-979f-24dd67bf6703/image.png" width="88" height="88" alt="Cisco Certified Support Technician Cybersecurity (CCST Cybersecurity)"></a>
   <a href="https://www.credly.com/badges/9b95825d-45b1-4c9a-98e2-7ccad62a5459/public_url"><img src="https://images.credly.com/size/220x220/images/c60f9007-64bb-42ed-869b-e1f05d6d77f2/image.png" width="88" height="88" alt="Cisco Certified Support Technician Networking (CCST Networking)"></a>
@@ -42,7 +48,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.credly.com/users/dragos-todoran/badges">View all 13 badges on Credly ↗</a>
+  <a href="https://www.credly.com/users/dragos-todoran/badges">View all badges on Credly ↗</a>
 </p>
 
 <img src="./assets/cable.svg" width="100%" alt="">
@@ -98,10 +104,6 @@ dns or tcp.flags.syn == 1 or tls
 <p align="center">
   <a href="https://github.com/FyreCalypto#js-contribution-activity-description">Live contribution graph ↗</a> &nbsp;·&nbsp;
   <a href="https://github.com/FyreCalypto?tab=repositories">All repositories ↗</a>
-</p>
-
-<p align="center">
-  <a href="https://countergithub.w3spaces.com/preview.svg?theme=rule34"><img src="https://countergithub.w3spaces.com/counter.svg?theme=rule34&amp;source=profile-live" width="320" alt="Animated badge request counter"></a>
 </p>
 
 ---
